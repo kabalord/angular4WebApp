@@ -9,5 +9,26 @@
 	margin: 0;
 	padding: 0;
 	max-width: 100%;
-	color: $red-app;
+	box-shadow: 0px 2px 5px $gray-app;
+	border-radius: 2px;
+	margin-top: 30px;
+	overflow: hidden;
+
+	header {
+		background-color: $red-app;
+		color: $white-app;
+		text-align: center;
+		height: 90px;
+	}
+	.main {
+	}
+	footer {
+		background-color: $gray-app; 
+		color: $black-app;;
+    	display: inline-block;
+    	width: 100%;
+    	vertical-align: middle;
+    	text-align: center;
+    	height: 100%;
+	}
 }
