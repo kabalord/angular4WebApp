@@ -19,12 +19,23 @@
 		color: $white-app;
 		text-align: center;
 		height: 90px;
+		display: inline-block;
+		width: 100%;
 	}
 	nav {
-		margin-top: 20px;
+		width: 100%;
+		padding: 15px 0;
+		background-color: $rose-app;
 		display: inline-block;
 		a {
 			margin: 20px;
+			color: $white-app;
+			transition: all 300ms;
+		}
+		a:hover {
+			text-decoration: none;
+			background-color: $red-app;
+			padding: 15px 0;
 		}
 	}
 	.main {
