@@ -37,6 +37,10 @@
 			background-color: $red-app;
 			padding: 15px 0;
 		}
+		a:focus {
+			font-size: 18px;
+		}
+
 	}
 	.main {
 		.jumbotron{
