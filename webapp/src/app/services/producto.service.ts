@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Observable';
 import { Producto } from '../models/producto';
 import { GLOBAL } from './global';
 
@@ -18,6 +18,6 @@ export class ProductoService{
 	}
 
 	getProductos(){
-		return "TEXTO DESDE EL SERVICIO";
+		return this._http.get(this.url+'productos').map(res => res.json());
 	}
 }
