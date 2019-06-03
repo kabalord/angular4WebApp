@@ -1,31 +1,18 @@
 <h3>{{titulo}}</h3>
 <hr/>
 
-<!--
-el formulario debe tener los mismos campos del modelo de producto
-para tener una coherencia con la base de datos
-
-		public id: number,
-		public nombre: string,
-		public descripcion: string,
-		public precio: number,
-		public image: string
-
--->
-
-<form #formProduct="ngForm" class="col-lg-6 form-product">
+<form #formProduct="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6 form-product">
 	<label>Nombre</label>
-	<input type="text" name="name" class="form-control">
+	<input type="text" name="name" #nombre="ngModel" [(ngModel)]="producto.nombre" class="form-control">
 
 	<label>Descripcion</label>
-	<textarea class="form-control"></textarea> 
+	<textarea name="descripcion" #descripcion="ngModel" [(ngModel)]="producto.descripcion" class="form-control"></textarea> 
 
 	<label>Precio</label>
-	<input type="text" name="precio" class="form-control">
+	<input type="text" name="precio" #precio="ngModel" [(ngModel)]="producto.precio" class="form-control">
 
-	<label>image</label>
+	<label>Imagen</label>
 	<input type="file" name="imagen" class="form-control">
 	<br>
 	<input type="submit" value="{{titulo}}" class="btn btn-success">
-	<br>
 </form>

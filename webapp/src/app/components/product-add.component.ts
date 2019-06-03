@@ -12,12 +12,17 @@ import { Producto } from '../models/producto';
 
 export class ProductAddComponent {
 	public titulo: string;
+	public producto: Producto;
 
 	constructor(){
 		this.titulo = 'Crear un nuevo producto';
+		this.producto = new Producto(0, '', '', 0, '');
 	}
 
 	ngOnInit(){
 		console.log('product-add.component.ts cargado...');
+	}
+	onSubmit(){
+		console.log(this.producto);
 	}
 }
