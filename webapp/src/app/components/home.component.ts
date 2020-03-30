@@ -8,7 +8,7 @@ export class HomeComponent{
 	public titulo: string;
 
 	constructor(){
-		this.titulo = 'Web app de productos con Angular 4';
+		this.titulo = 'Codez et suivez simplement vos biens.';
 	}
 
 	ngOnInit(){

@@ -15,7 +15,7 @@ export class ProductAddComponent {
 	public producto: Producto;
 
 	constructor(){
-		this.titulo = 'Crear un nuevo producto';
+		this.titulo = 'Créer un nouveau produit';
 		this.producto = new Producto(0, '', '', 0, '');
 	}
 

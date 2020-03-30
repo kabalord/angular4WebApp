@@ -17,7 +17,7 @@ export class ProductsListComponent{
 		private _router: Router,
 		private _productoService: ProductoService
 	){
-		this.titulo = 'Listado de productos';
+		this.titulo = 'Liste de produits';
 	}
 
 	ngOnInit(){

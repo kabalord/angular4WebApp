@@ -9,41 +9,43 @@
 	margin: 0;
 	padding: 0;
 	max-width: 100%;
-	box-shadow: 0px 2px 5px $gray-app;
 	border-radius: 2px;
-	margin-top: 30px;
 	overflow: hidden;
 
 	header {
-		background-color: $red-app;
 		color: $white-app;
 		text-align: center;
-		height: 90px;
 		display: inline-block;
 		width: 100%;
-	}
 	nav {
-		width: 100%;
-		padding: 15px 0;
-		background-color: $rose-app;
+	  	padding: 15px 0;
 		display: inline-block;
 		a {
 			margin: 20px;
-			color: $white-app;
-			transition: all 300ms;
+		    color: #337ab7;
+		    transition: all 300ms;
+		    font-weight: bold;
+		    font-size: 20px;
 		}
 		a:hover {
 			text-decoration: none;
-			background-color: $red-app;
+			font-size: 25px;
 			padding: 15px 0;
 		}
 		a:focus {
 			font-size: 18px;
 		}
 
+		}
 	}
 	.main {
+	padding: 0 50px;
 		.jumbotron{
+		    background-color: #FFFFFF;
+			padding-top: 0;
+			p {
+			margin: 30px 0 50px 0;
+			}
 			.botones {
 			text-align: center;
 				a {
@@ -59,13 +61,16 @@
 		}
 	}
 	footer {
-		background-color: $gray-app; 
-		color: $black-app;;
+		background-color: $blue-app; 
+		color: $white-app;;
     	display: inline-block;
     	width: 100%;
+		padding: 10px;
     	vertical-align: middle;
     	text-align: center;
-    	height: 100%;
 	    margin-top: 20px;
+	    position: fixed;
+	    bottom: 0;
+	    left: 0;
 	}
 }

@@ -21,6 +21,7 @@
     "@angular/router": "~7.2.0",
     "angular-cli": "^1.0.0-beta.28.3",
     "core-js": "^2.5.4",
+    "node-sass": "^4.13.1",
     "rxjs": "^6.5.1",
     "rxjs-compat": "^6.5.1",
     "tslib": "^1.9.0",
@@ -51,5 +52,9 @@
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": [
+    "npm",
+    "install"
+  ]
 }

@@ -7,7 +7,7 @@ import { GLOBAL } from './services/global';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public title = 'Productos Angular 4';
+  public title = 'Contrôle des stocks et inventaire';
   public header_color: string;
 
   constructor(){
