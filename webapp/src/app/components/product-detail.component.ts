@@ -1,0 +1,27 @@
+import { Component } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
+import { ProductoService } from '../services/producto.service';
+import { Producto } from '../models/producto';
+
+@Component({
+
+	selector: 'product-detail',
+	templateUrl: '../views/product-detail.html',
+	providers: [ProductoService]
+})
+
+export class ProductDetailComponent{
+	public producto: Producto;
+
+	constructor(
+		private _productoService: ProductoService,
+		private _route: ActivatedRoute,
+		private _router: Router
+
+	){}
+
+	ngOnInit(){
+		console.log('product-detail.component.ts cargado...')
+	}
+}
