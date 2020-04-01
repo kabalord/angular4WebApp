@@ -4,9 +4,10 @@
 			<h2>{{titulo}}</h2>
 			<p>Enfin une solution mobile simple et rationnelle pour tracker tous les biens et équipements de ma structure</p>
 			<div class="botones col-lg-12">
-				<a id="ver-productos" href="#" class="btn-lg btn-primary">Voir les produits</a>		
-				<a id="agregar-productos" href="#" class="btn-lg btn-success">Ajouter le produit</a>
+				<a id="ver-productos" [routerLink]="['/products']" class="btn-lg btn-primary">Voir les produits</a>		
+				<a id="agregar-productos" [routerLink]="['/crear-producto']" class="btn-lg btn-success">Ajouter le produit</a>
 			</div>
 	 	</div>
 	</div>
 </div>
+

@@ -2,5 +2,9 @@
 	<div class="jumbotron">
 		<h2>{{titulo}}</h2>
 		<p>L'URL que vous essayez de charger n'existe pas!</p>
+			<div class="botones col-lg-12">
+				<a id="ver-productos" [routerLink]="['/products']" class="btn-lg btn-primary">Voir les produits</a>		
+				<a id="agregar-productos" [routerLink]="['/crear-producto']" class="btn-lg btn-success">Ajouter le produit</a>
+			</div>
  	</div>
 </div>
