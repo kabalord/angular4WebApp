@@ -1,1 +1,20 @@
-<h1>Detail du produit</h1>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12">
+			<div *ngIf="!producto">
+			<p class="text-center">Veuillez patienter pendant le chargement du produit......</p>
+			</div>
+			<div *ngIf="producto">
+				<div class="col-md-4" *ngIf="producto.imagen">
+				<img src="http://localhost:8888/angularapirest/uploads/{{producto.imagen}}" class="producto_imagen"/>
+				</div>
+			<div class="col-md-8">
+				<h2>Detail du produit</h2>
+				<h3>{{producto.nombre}}</h3>
+				<p><strong>{{producto.precio}} €</strong></p>
+				<p>{{producto.descripcion}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+

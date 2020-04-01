@@ -20,7 +20,7 @@ export class ProductoService{
 	}
 
 	getProducto(id){
-		return this._http.get(this.url+'producto/'+id).map(res => res.json());
+		return this._http.get(this.url+'productos/'+id).map(res => res.json()); //método para utilizar en el componente product-detail.component para récuperar el id del producto
 	}
 
 	addProducto(producto: Producto){
