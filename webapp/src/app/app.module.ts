@@ -15,6 +15,7 @@ import { ErrorComponent } from './components/error.component';
 import { ProductsListComponent } from './components/products-list.component';
 import { ProductAddComponent } from './components/product-add.component';
 import { ProductDetailComponent } from './components/product-detail.component';
+import { ProductEditComponent } from './components/product-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProductDetailComponent } from './components/product-detail.component';
     ErrorComponent,
     ProductsListComponent,
     ProductAddComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,

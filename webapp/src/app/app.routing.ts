@@ -7,6 +7,8 @@ import { ErrorComponent } from './components/error.component';
 import { ProductsListComponent } from './components/products-list.component';
 import { ProductAddComponent } from './components/product-add.component';
 import { ProductDetailComponent } from './components/product-detail.component';
+import { ProductEditComponent } from './components/product-edit.component';
+
 
 const appRoutes: Routes = [
 	{path: '', component: HomeComponent},
@@ -14,6 +16,7 @@ const appRoutes: Routes = [
 	{path:'products', component: ProductsListComponent},
 	{path: 'crear-producto', component: ProductAddComponent},
 	{path: 'producto/:id', component: ProductDetailComponent},
+	{path: 'editar-producto/:id', component: ProductEditComponent},
 	{path: '**', component: ErrorComponent}
 ];
 
