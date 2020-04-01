@@ -14,7 +14,12 @@ export class ProductAddComponent {
 	public titulo: string;
 	public producto: Producto;
 
-	constructor(){
+	constructor(
+		private _productoService: ProductoService,
+		private _route: ActivatedRoute,
+		private _router: Router
+
+	){
 		this.titulo = 'Créer un nouveau produit';
 		this.producto = new Producto(0, '', '', 0, '');
 	}
@@ -24,5 +29,22 @@ export class ProductAddComponent {
 	}
 	onSubmit(){
 		console.log(this.producto);
+
+		this._productoService.addProducto(this.producto).subscribe(
+
+			response => {
+			if(response.code == 200){
+				this._router.navigate(['/products']);
+
+				}else{
+					alert(response);
+				}
+			},
+			error => {
+				alert(<any>error);
+			}
+
+		);
 	}
+
 }
