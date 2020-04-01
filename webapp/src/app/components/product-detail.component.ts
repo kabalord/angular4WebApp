@@ -34,7 +34,7 @@ export class ProductDetailComponent{
 					if(response.code == 200){
 						this.producto = response.data;
 					}else{
-						this._router.navigate(['/productos']);
+						this._router.navigate(['/products']);
 					}
 				},
 				error => {

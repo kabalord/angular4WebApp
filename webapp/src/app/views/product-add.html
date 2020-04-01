@@ -3,33 +3,38 @@
 
 <form #formProduct="ngForm" (ngSubmit)="onSubmit()" class="form-product col-lg-12">
 	<div class="row">
-		<div class="col-lg-6">
-		<label>
-		Nom
-		<span *ngIf="!nombre.valid && nombre.touched" class="label label-danger">le nom est obligatoire</span>
-	</label>
-	<input type="text" name="name" #nombre="ngModel" [(ngModel)]="producto.nombre" class="form-control" required/>
+		<div class="col-lg-5">
+				<label>
+				Nom
+				<span *ngIf="!nombre.valid && nombre.touched" class="label label-danger">le nom est obligatoire</span>
+			</label>
+			<input type="text" name="name" #nombre="ngModel" [(ngModel)]="producto.nombre" class="form-control" required/>
 
-	<label>
-	Description
-	<span *ngIf="!descripcion.valid && descripcion.touched" class="label label-danger">La description est obligatoire</span>
-	</label>
-	<textarea name="descripcion" #descripcion="ngModel" [(ngModel)]="producto.descripcion" class="form-control" required>
-		
-	</textarea> 
+			<label>
+			Description
+			<span *ngIf="!descripcion.valid && descripcion.touched" class="label label-danger">La description est obligatoire</span>
+			</label>
+			<textarea name="descripcion" #descripcion="ngModel" [(ngModel)]="producto.descripcion" class="form-control" required>
+				
+			</textarea> 
 		</div>
-		<div class="col-lg-6">
-	<label>
-	Prix
-	<span *ngIf="!precio.valid && precio.touched" class="label label-danger">Le prix il est pas correct </span>
-	</label>
-	<input type="text" name="precio" #precio="ngModel" [(ngModel)]="producto.precio" class="form-control" required pattern="[0-9]+"/>
+		<div class="col-lg-5">
+			<label>
+			Prix
+			<span *ngIf="!precio.valid && precio.touched" class="label label-danger">Le prix il est pas correct </span>
+			</label>
+			<input type="text" name="precio" #precio="ngModel" [(ngModel)]="producto.precio" class="form-control" required pattern="[0-9]+"/>
 
-	<label>Image</label>
-	<input type="file" name="imagen" class="form-control" (change)="fileChangeEvent($event)">
+			<label>Image</label>
+			<input type="file" name="imagen" class="form-control" (change)="fileChangeEvent($event)"/>
 		</div>
+		<div class="col-lg-2">
+			<div class="image-miniature" *ngIf = "is_edit">
+				<img src="http://localhost:8888/angularapirest/uploads/{{producto.imagen}}"/>
+			</div>
+		</div>		
 	</div>
 
 	<br>
-	<input type="submit" value="{{titulo}}" class="btn btn-success" [disabled]="!formProduct.form.valid">
+	<input type="submit" value="{{titulo}}" class="btn btn-success" [disabled]="!formProduct.form.valid"/>
 </form>
