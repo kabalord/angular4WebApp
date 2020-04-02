@@ -2,19 +2,43 @@
 <div class="container-fluid">
   <div class="row">
     <div class="content col-lg-12">
-      <header class="col-lg-12">  
-        <div class="logo">
-          <img src="../assets/logo-stock.png">
+      <header class="col-lg-12"> 
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" [routerLink]="['/home']" [routerLinkActive]="['active']"><img style="max-width: 120px;" src="../assets/logo-stock.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="menu collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a [routerLink]="['/home']" [routerLinkActive]="['active']" href="#"><i class="glyphicon glyphicon-home" aria-hidden="true" style="margin-right: 5px;"></i><span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestion Stock <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a [routerLink]="['/products']" [routerLinkActive]="['active']" href="#"><i class="glyphicon glyphicon-th-list" aria-hidden="true" style="margin-right: 5px;"></i>Liste de Produits</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a [routerLink]="['/crear-producto']" [routerLinkActive]="['active']" href="#"><i class="glyphicon glyphicon-plus" aria-hidden="true" style="margin-right: 5px;"></i>Ajouter un produit</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a [routerLink]="['/home']" [routerLinkActive]="['active']" class="nav-item nav-link" href="#">Accueil</a>
-              <a [routerLink]="['/products']" [routerLinkActive]="['active']"  class="nav-item nav-link" href="#">Produits</a>
-              <a [routerLink]="['/crear-producto']" [routerLinkActive]="['active']" class="nav-item nav-link"  href="#">Créer Produits</a>
-            </div>
-          </div>
-        </nav>
+        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+ 
       </header>
       <section class="main container-fluid">
         <!--Componente actual-->
